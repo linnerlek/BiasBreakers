@@ -3,7 +3,8 @@
     font-family: "Ubuntu", serif;
     font-weight: 400;
     font-style: normal;
-    
+    background-color: #FFD6FF;
+  
 }
 
 body {
@@ -12,9 +13,7 @@ body {
 }
 
 header {
-    background-color: #FFD6FF;
     padding: 10px 20px; /* Adjust padding for spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .nav-container {
@@ -84,6 +83,8 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin: 2rem;
+    
+
 }
 
 .scenario-box {
@@ -108,17 +109,22 @@ h1 {
     width: 100px; /* Adjust as necessary */
     height: 100px; /* Adjust as necessary */
     margin-right: 1rem;
+    background-color: #fff;
 }
 
 .scenario-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #fff;
 }
 
+#white {
+    background-color: #fff;
+}
 
 .chat-container {
-    max-width: 95 vw;
+    max-width: 90 vw;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -133,33 +139,38 @@ h1 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .chat-message {         /* Space inside each box */
     margin-bottom: 45px;    /* Space between messages */
-    background-color: #f9f9f9;
+    background-color: #fff;
     font-size: 20px;
 }
 
 .user-message {
     text-align: right;
+    background-color: #fff;
 }
 
 .choice-form {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 .choice-buttons {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    background-color: #fff;
 }
 
 .choice-buttons button {
     flex: 1;
     margin: 0 5px; /* Spacing between buttons */
+    background-color: #fff;
+    margin-bottom: 10px;
 }
 
 textarea {
