@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowHer - Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-left">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/howto">How to play</a></li>
+                </ul>
+                <div class="nav-right">
+                    <a href="/scenario" id="play-button">
+                        <img src="/static/images/play-button-svgrepo-com.svg" alt="Play Button" id="PlayButton">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="chat-container">
+            <div class="chat-box">
+                <div class="chat-message">
+                    <p><strong>Scenario:</strong> {{ scenario['description'] }}</p>
+                </div>
+
+                {% for dialogue in dialogue_history %}
+                    <div class="chat-message user-message">
+                        <p>{{ dialogue.user_message|safe }}</p>
+                    </div>
+                    <div class="chat-message her-message">
+                        <p>{{ dialogue.her_response|safe }}</p>
+                    </div>
+                    <div class="chat-message thoughts-message">
+                        <p>{{ dialogue.thoughts|safe }}</p>
+                    </div>
+                    {% if dialogue.additional %}
+                    <div class="chat-message additional-message">
+                        <p>{{ dialogue.additional|safe }}</p>
+                    </div>
+                {% endif %}
+                {% endfor %}
+
+                {% if game_ended %}
+
+                {% endif %}
+
+                <!-- Main choice form -->
+                {% if not sub_choices and not game_ended %}
+                    <form method="POST" class="choice-form">
+                        {% for key, value in scenario['choices'].items() %}
+                            <button type="submit" name="choice" value="{{ key }}">{{ value }}</button>
+                        {% endfor %}
+                    </form>
+                {% endif %}
+
+                <!-- Sub-choice form -->
+                {% if sub_choices and not game_ended %}
+                    <div class="sub-choices">
+                        <form method="post">
+                            <input type="hidden" name="main_choice" value="{{ session.main_choice }}">
+                            <p>Select a follow-up action:</p>
+                            {% for key, sub_data in sub_choices.items() %}
+                                <button type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
+                            {% endfor %}
+                        </form>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>
