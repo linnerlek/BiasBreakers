@@ -29,40 +29,50 @@
     <main>
         <div class="chat-container" id="white">
             <div class="chat-box">
-                <div class="chat-message" id="white">
-                    <p id="white">Scenario: {{ scenario['description'] }}</p>
+                <div class="chat-message scenario" id="white">
+                    <img src="/static/images/search-folder-svgrepo-com.svg" id="searchimg" alt="">
+                    <p id="white">{{ scenario['description'] }}</p>
                 </div>
 
                 {% for dialogue in dialogue_history %}
-                    <div class="chat-message user-message">
-                        <div class="message-bubble" id="white">
-                            <p id="white">{{ dialogue.user_message|safe }}</p>
+                    {% if dialogue.user_message %}
+                        <div class="chat-message user-message">
+                            <img src="/static/images/image0-3.jpg" alt="" class="user-image">
+                            <div class="message-bubble">
+                                <p id="message">{{ dialogue.user_message|safe }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="chat-message her-message">
-                        <div class="message-bubble" id="white">
-                            <p id="white"> {{ dialogue.her_response|safe }}</p>
+                    {% endif %}
+                    {% if dialogue.her_response %}
+                        <div class="chat-message her-message">
+                            <img src="/static/images/image0-2.jpg" alt="" class="her-image">
+                            <div class="message-bubble">
+                                <p id="message">{{ dialogue.her_response|safe }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="chat-message user-message">
-                        <div class="message-bubble" id="white">
-                            <p id="white">{{ dialogue.thoughts|safe }}</p>
+                    {% endif %}
+                    {% if dialogue.thoughts %}
+                        <div class="chat-message user-message">
+                            <img src="/static/images/image0-3.jpg" alt="" class="user-image">
+                            <div class="message-bubble">
+                                <p id="message">{{ dialogue.thoughts|safe }}</p>
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
                     {% if dialogue.additional %}
-                    <div class="chat-message additional-message" id="white">
-                        <div class="message-bubble">
-                            <p id="white">{{ dialogue.additional|safe }}</p>
+                        <div class="chat-message additional-message">
+                            <div class="message-bubble">
+                                <p id="message">{{ dialogue.additional|safe }}</p>
+                            </div>
                         </div>
-                    </div>
-                {% endif %}
+                    {% endif %}
                 {% endfor %}
                 
                 
                 {% if game_ended %}
                     <form action="/new_game" method="get">
                         <div class="choice-buttons">
-                            <button type="submit">Restart Scenario</button>
+                            <button id="pink" type="submit">Restart Scenario</button>
                         </div>
                     </form>
                 {% endif %}
@@ -73,7 +83,7 @@
                     <form method="POST" class="choice-form">
                          <div class="choice-buttons">
                             {% for key, value in scenario['choices'].items() %}
-                                <button type="submit" name="choice" value="{{ key }}">{{ value }}</button>
+                                <button id="pink" type="submit" name="choice" value="{{ key }}">{{ value }}</button>
                             {% endfor %}
                         </div>
                     </form>
@@ -87,7 +97,7 @@
                                 <input type="hidden" name="main_choice" value="{{ session.main_choice }}">
                                 <p id="white">Select a follow-up action:</p>
                                 {% for key, sub_data in sub_choices.items() %}
-                                    <button type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
+                                    <button id="pink" type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
                                 {% endfor %}
                             </div>
                         </form>

@@ -116,7 +116,12 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 25px;
     background-color: #fff;
+}
+
+.scenario {
+    gap: 10px;
 }
 
 #white {
@@ -124,7 +129,8 @@ h1 {
 }
 
 .chat-container {
-    width: 80%;
+    display: flex;
+    width: 90%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -142,16 +148,46 @@ h1 {
     background-color: #fff;
 }
 
-.chat-message {         /* Space inside each box */
-    margin-bottom: 45px;    /* Space between messages */
+.chat-message {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 45px; /* Space between messages */
     background-color: #fff;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .user-message {
-    text-align: right;
+    justify-content: flex-end; /* Align user message to the right */
+}
+
+.her-message {
+    justify-content: flex-start; /* Align her message to the left */
+}
+
+#message {
+    background-color: #f1f1f1;
+}
+
+#searchimg {
+    width: 80px;
     background-color: #fff;
 }
+
+.user-image, .her-image {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    margin-left: 10px; /* Space between image and message */
+    margin-right: 10px; /* Space between image and message */
+}
+
+.message-bubble {
+    background-color: #f1f1f1; /* Background for message bubble */
+    padding: 10px; /* Padding inside the bubble */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 60%; /* Limit the width of message bubble */
+}
+
 
 .choice-form {
     display: flex;
@@ -171,6 +207,7 @@ h1 {
     margin: 0 5px; /* Spacing between buttons */
     background-color: #fff;
     margin-bottom: 10px;
+    font-size: 25px;
 }
 
 textarea {
@@ -195,6 +232,9 @@ textarea {
 #howTo {
     display: flex; /* Use flexbox for the layout */
     padding: 20px;
+}
+#pink {
+    background-color: #FFD6FF;
 }
 
 .left-column, .right-column {
@@ -229,7 +269,7 @@ textarea {
 }
 
 #bodytext {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
     max-width: 90%; /* Adjust to prevent overflow */
     margin: 0 auto;
