@@ -20,7 +20,7 @@
                 </ul>
                 <div class="nav-right">
                     <a href="/scenario" id="play-button">
-                        <img src="/static/images/play-button-svgrepo-com.svg" alt="Play Button" id="PlayButton">
+                        <img src="/static/images/VPlx9v01.svg" alt="Play Button" id="PlayButton">
                     </a>
                 </div>
             </div>
@@ -35,17 +35,25 @@
 
                 {% for dialogue in dialogue_history %}
                     <div class="chat-message user-message">
-                        <p>{{ dialogue.user_message|safe }}</p>
+                        <div class="message-bubble">
+                            <p>{{ dialogue.user_message|safe }}</p>
+                        </div>
                     </div>
                     <div class="chat-message her-message">
-                        <p>{{ dialogue.her_response|safe }}</p>
+                        <div class="message-bubble">
+                            <p>{{ dialogue.her_response|safe }}</p>
+                        </div>
                     </div>
                     <div class="chat-message user-message">
-                        <p>{{ dialogue.thoughts|safe }}</p>
+                        <div class="message-bubble">
+                            <p>{{ dialogue.thoughts|safe }}</p>
+                        </div>
                     </div>
                     {% if dialogue.additional %}
                     <div class="chat-message additional-message">
-                        <p>{{ dialogue.additional|safe }}</p>
+                        <div class="message-bubble">
+                            <p>{{ dialogue.additional|safe }}</p>
+                        </div>
                     </div>
                 {% endif %}
                 {% endfor %}
