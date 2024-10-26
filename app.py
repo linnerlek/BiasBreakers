@@ -50,12 +50,13 @@ def game(scenario_id):
             user_choice = request.form['choice']
             main_dialogue = scenario["outcomes"][user_choice]["dialogue"]
 
-            # Add main choice dialogue to session history
-            session['dialogue_history'].append({
-                "user_message": main_dialogue["user"],
-                "her_response": main_dialogue["her"],
-                "thoughts": main_dialogue["thoughts"]
-            })
+            # Add main choice dialogue to session history only if it's not empty
+            if main_dialogue['user'] or main_dialogue['her'] or main_dialogue['thoughts']:
+                session['dialogue_history'].append({
+                    "user_message": f"You: {main_dialogue['user']}" if main_dialogue['user'] else "",
+                    "her_response": f"They say: {main_dialogue['her']}" if main_dialogue['her'] else "",
+                    "thoughts": f"You think: {main_dialogue['thoughts']}" if main_dialogue['thoughts'] else ""
+                })
 
             # Store selected main choice in the session
             session['main_choice'] = user_choice
@@ -69,26 +70,31 @@ def game(scenario_id):
             sub_data = scenario["outcomes"][main_choice]["sub_choices"][sub_choice]
             sub_dialogue = scenario["outcomes"][main_choice]["sub_choices"][sub_choice]["dialogue"]
 
-            # Append sub-choice dialogue to history
-            session['dialogue_history'].append({
-                "user_message": sub_dialogue["user"],
-                "her_response": sub_dialogue["her"],
-                "thoughts": sub_dialogue["thoughts"]
-            })
+            # Append sub-choice dialogue to history only if not empty
+            if sub_dialogue['user'] or sub_dialogue['her'] or sub_dialogue['thoughts']:
+                session['dialogue_history'].append({
+                    "user_message": f"You: {sub_dialogue['user']}" if sub_dialogue['user'] else "",
+                    "her_response": f"They say: {sub_dialogue['her']}" if sub_dialogue['her'] else "",
+                    "thoughts": f"You think: {sub_dialogue['thoughts']}" if sub_dialogue['thoughts'] else ""
+                })
 
-            session['dialogue_history'].append(
-                {"additional": f"Outcome: {sub_data['outcome']}"})
-            session['dialogue_history'].append(
-                {"additional": f"Feedback: {sub_data['pfeedback']}"})
-            session['dialogue_history'].append(
-                {"additional": f"Challenges: {sub_data['challenges']}"})
-            session['dialogue_history'].append(
-                {"additional": f"Encouragement: {sub_data['encouragement']}"})
-
-
+            # Append additional information
+            if sub_data.get('outcome'):
+                session['dialogue_history'].append(
+                    {"additional": f"Outcome: {sub_data['outcome']}"})
+            if sub_data.get('pfeedback'):
+                session['dialogue_history'].append(
+                    {"additional": f"Feedback: {sub_data['pfeedback']}"})
+            if sub_data.get('challenges'):
+                session['dialogue_history'].append(
+                    {"additional": f"Challenges: {sub_data['challenges']}"})
+            if sub_data.get('encouragement'):
+                session['dialogue_history'].append(
+                    {"additional": f"Encouragement: {sub_data['encouragement']}"})
 
             # Mark game as ended
             game_ended = True
+
 
     return render_template(
         'game.html',
