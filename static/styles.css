@@ -51,15 +51,9 @@ h1 {
 }
 
 #PlayButton {
-    width: 30px;
+    width: 200px;
 }
 
-#play-button {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 5px;
-}
 
 .play-text {
     margin-left: 8px;
@@ -70,7 +64,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh; 
+    height: 15vh; 
 }
 
 .large-play-button {
@@ -78,7 +72,7 @@ h1 {
 }
 
 #LargePlayButton {
-    width: 250px; 
+    width: 600px; 
 }
 
 .scenario-container {
@@ -139,7 +133,7 @@ h1 {
 }
 
 .chat-message {         /* Space inside each box */
-    margin-bottom: 25px;    /* Space between messages */
+    margin-bottom: 45px;    /* Space between messages */
     background-color: #f9f9f9;
 }
 
