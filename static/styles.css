@@ -75,6 +75,10 @@ h1 {
     width: 600px; 
 }
 
+#LargePlayButton2 {
+    width: 400px; 
+}
+
 .scenario-container {
     display: flex;
     flex-direction: column;
@@ -135,6 +139,7 @@ h1 {
 .chat-message {         /* Space inside each box */
     margin-bottom: 45px;    /* Space between messages */
     background-color: #f9f9f9;
+    font-size: 20px;
 }
 
 .user-message {
@@ -177,7 +182,17 @@ textarea {
     background-color: #5D4FBB; /* Darker shade on hover */
 }
 #howTo {
+    display: flex; /* Use flexbox for the layout */
     padding: 20px;
+}
+
+.left-column, .right-column {
+    width: 50%; /* Each column takes 50% of the width */
+    padding: 20px; /* Add some padding */
+}
+
+.left-column {
+    border-right: 1px solid #ccc; /* Optional: adds a separator line between columns */
 }
 
 #about {
@@ -185,24 +200,42 @@ textarea {
     margin: 40px 20px; /* Add margin for spacing */
 }
 
+#about p {
+    font-size: 27px;
+    line-height: 1.6;
+    max-width: 90%; /* Adjust to prevent overflow */
+    margin: 0 auto;
+}
+
 #h2Header {
-    font-size: 40px; /* Make the h2 bigger */
-    font-weight: bold; /* Make the h2 bold */
+    font-size: 60px;
+    font-weight: bold;
 }
 
 #h3Header {
-    font-size: 36px; /* Make the h2 bigger */
-    font-weight: bold; /* Make the h2 bold */
-}
-
-#about p {
-    margin: 0 auto; /* Center the paragraph */
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #bodytext {
-    font-size: 27px; /* Set paragraph text size */
-    line-height: 1.6; /* Increase line height for readability */
-    max-width: 80vw; /* Limit width for better readability */
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%; /* Adjust to prevent overflow */
+    margin: 0 auto;
+}
 
+.btcenter {
+    text-align: center;
+}
+
+
+
+ul {
+    padding-left: 20px; /* Indent the list */
+    margin: 10px 0; /* Space around the list */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
 }
 
