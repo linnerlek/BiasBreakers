@@ -77,13 +77,13 @@ def game(scenario_id):
             })
 
             session['dialogue_history'].append(
-                {"additional": f"<strong>Outcome:</strong> {sub_data['outcome']}"})
+                {"additional": f"Outcome: {sub_data['outcome']}"})
             session['dialogue_history'].append(
-                {"additional": f"<strong>Feedback:</strong> {sub_data['pfeedback']}"})
+                {"additional": f"Feedback: {sub_data['pfeedback']}"})
             session['dialogue_history'].append(
-                {"additional": f"<strong>Challenges:</strong> {sub_data['challenges']}"})
+                {"additional": f"Challenges: {sub_data['challenges']}"})
             session['dialogue_history'].append(
-                {"additional": f"<strong>Encouragement:</strong> {sub_data['encouragement']}"})
+                {"additional": f"Encouragement: {sub_data['encouragement']}"})
 
 
 

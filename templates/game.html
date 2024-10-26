@@ -27,32 +27,32 @@
         </nav>
     </header>
     <main>
-        <div class="chat-container">
+        <div class="chat-container" id="white">
             <div class="chat-box">
-                <div class="chat-message">
-                    <p><strong>Scenario:</strong> {{ scenario['description'] }}</p>
+                <div class="chat-message" id="white">
+                    <p id="white">Scenario: {{ scenario['description'] }}</p>
                 </div>
 
                 {% for dialogue in dialogue_history %}
                     <div class="chat-message user-message">
-                        <div class="message-bubble">
-                            <p>{{ dialogue.user_message|safe }}</p>
+                        <div class="message-bubble" id="white">
+                            <p id="white">{{ dialogue.user_message|safe }}</p>
                         </div>
                     </div>
                     <div class="chat-message her-message">
-                        <div class="message-bubble">
-                            <p>{{ dialogue.her_response|safe }}</p>
+                        <div class="message-bubble" id="white">
+                            <p id="white"> {{ dialogue.her_response|safe }}</p>
                         </div>
                     </div>
                     <div class="chat-message user-message">
-                        <div class="message-bubble">
-                            <p>{{ dialogue.thoughts|safe }}</p>
+                        <div class="message-bubble" id="white">
+                            <p id="white">{{ dialogue.thoughts|safe }}</p>
                         </div>
                     </div>
                     {% if dialogue.additional %}
-                    <div class="chat-message additional-message">
+                    <div class="chat-message additional-message" id="white">
                         <div class="message-bubble">
-                            <p>{{ dialogue.additional|safe }}</p>
+                            <p id="white">{{ dialogue.additional|safe }}</p>
                         </div>
                     </div>
                 {% endif %}
@@ -85,7 +85,7 @@
                         <form method="post">
                             <div class="choice-buttons">
                                 <input type="hidden" name="main_choice" value="{{ session.main_choice }}">
-                                <p>Select a follow-up action:</p>
+                                <p id="white">Select a follow-up action:</p>
                                 {% for key, sub_data in sub_choices.items() %}
                                     <button type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
                                 {% endfor %}

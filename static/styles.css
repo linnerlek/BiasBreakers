@@ -3,7 +3,8 @@
     font-family: "Ubuntu", serif;
     font-weight: 400;
     font-style: normal;
-    
+    background-color: #FFD6FF;
+  
 }
 
 body {
@@ -12,9 +13,7 @@ body {
 }
 
 header {
-    background-color: #FFD6FF;
     padding: 10px 20px; /* Adjust padding for spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .nav-container {
@@ -75,11 +74,17 @@ h1 {
     width: 600px; 
 }
 
+#LargePlayButton2 {
+    width: 400px; 
+}
+
 .scenario-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem;
+    
+
 }
 
 .scenario-box {
@@ -104,17 +109,22 @@ h1 {
     width: 100px; /* Adjust as necessary */
     height: 100px; /* Adjust as necessary */
     margin-right: 1rem;
+    background-color: #fff;
 }
 
 .scenario-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #fff;
 }
 
+#white {
+    background-color: #fff;
+}
 
 .chat-container {
-    max-width: 95 vw;
+    max-width: 90 vw;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -129,32 +139,38 @@ h1 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .chat-message {         /* Space inside each box */
     margin-bottom: 45px;    /* Space between messages */
-    background-color: #f9f9f9;
+    background-color: #fff;
+    font-size: 20px;
 }
 
 .user-message {
     text-align: right;
+    background-color: #fff;
 }
 
 .choice-form {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 .choice-buttons {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    background-color: #fff;
 }
 
 .choice-buttons button {
     flex: 1;
     margin: 0 5px; /* Spacing between buttons */
+    background-color: #fff;
+    margin-bottom: 10px;
 }
 
 textarea {
@@ -176,3 +192,61 @@ textarea {
 .send-button:hover {
     background-color: #5D4FBB; /* Darker shade on hover */
 }
+#howTo {
+    display: flex; /* Use flexbox for the layout */
+    padding: 20px;
+}
+
+.left-column, .right-column {
+    width: 50%; /* Each column takes 50% of the width */
+    padding: 20px; /* Add some padding */
+}
+
+.left-column {
+    border-right: 1px solid #ccc; /* Optional: adds a separator line between columns */
+}
+
+#about {
+    text-align: center; /* Center the content */
+    margin: 40px 20px; /* Add margin for spacing */
+}
+
+#about p {
+    font-size: 27px;
+    line-height: 1.6;
+    max-width: 90%; /* Adjust to prevent overflow */
+    margin: 0 auto;
+}
+
+#h2Header {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#h3Header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#bodytext {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%; /* Adjust to prevent overflow */
+    margin: 0 auto;
+}
+
+.btcenter {
+    text-align: center;
+}
+
+
+
+ul {
+    padding-left: 20px; /* Indent the list */
+    margin: 10px 0; /* Space around the list */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
