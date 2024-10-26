@@ -21,12 +21,12 @@ scenarios = {
                         "outcome": "This is the outcome",
                         "pfeedback": "feedback",
                         "challenges": "challenges",
-                        "encouragement": "ecouragement",
+                        "encouragement": "encouragement",
                         "dialogue": {
                             "user": "I decided to ask others...",
                             "her": "Her response was surprising...",
                             "thoughts": "You feel more confident now that others are involved."
-                        },
+                        }
                     },
                     "2": {
                         "text": "Provide data on gender bias.",
@@ -34,7 +34,7 @@ scenarios = {
                             "user": "I shared some research with her.",
                             "her": "She seemed taken aback by the numbers.",
                             "thoughts": "You think you may have reached her logically."
-                        },
+                        }
                     },
                     "3": {
                         "text": "Suggest a team workshop on gender issues.",
@@ -42,7 +42,7 @@ scenarios = {
                             "user": "Team workshop",
                             "her": "Team workshop",
                             "thoughts": "team workshop."
-                        },
+                        }
                     },
                     "4": {
                         "text": "Follow up with her afterward.",
@@ -50,7 +50,7 @@ scenarios = {
                             "user": "follow up",
                             "her": "follow up",
                             "thoughts": "follow up"
-                        },
+                        }
                     }
                 }
             },
@@ -59,7 +59,6 @@ scenarios = {
                     "user": "I can't let this slide. It’s important we address bias openly.",
                     "her": "But isn't it just a discussion? People are allowed to have different opinions.",
                     "thoughts": "You realize that challenging her may create tension, but it's necessary to foster a more equitable environment."
-                }
                 },
                 "sub_choices": {
                     "1": {
@@ -67,12 +66,12 @@ scenarios = {
                         "outcome": "This is the outcome",
                         "pfeedback": "feedback",
                         "challenges": "challenges",
-                        "encouragement": "ecouragement",
+                        "encouragement": "encouragement",
                         "dialogue": {
                             "user": "I invited her to continue the conversation privately after the meeting.",
                             "her": "I’m open to discussing this further, but I still have my doubts.",
                             "thoughts": "You feel hopeful that a one-on-one conversation might lead to a more nuanced understanding."
-                        },
+                        }
                     },
                     "2": {
                         "text": "Ask the team to share similar experiences.",
@@ -80,7 +79,7 @@ scenarios = {
                             "user": "I asked if others had faced similar experiences with bias.",
                             "her": "I hadn’t realized it was such a common issue here.",
                             "thoughts": "You feel validated as more team members begin sharing their experiences."
-                        },
+                        }
                     },
                     "3": {
                         "text": "Propose creating a team initiative to address bias.",
@@ -88,19 +87,18 @@ scenarios = {
                             "user": "I proposed creating a team initiative to address bias more systematically.",
                             "her": "That could be interesting, but I’m not sure how it would work.",
                             "thoughts": "You feel encouraged that she’s at least considering the idea."
-                        },
+                        }
                     },
                     "4": {
                         "text": "Acknowledge her perspective while emphasizing the importance of allyship.",
                         "dialogue": {
                             "user": "I acknowledged her experience while stressing the need for us to support each other as allies.",
-                            "her":" I see your point, but I still believe my own experiences are valid.",
+                            "her": "I see your point, but I still believe my own experiences are valid.",
                             "thoughts": "You feel that recognizing her perspective may make her more open to hearing yours."
-                        },
+                        }
                     }
                 }
             },
-         
             "C": {
                 "dialogue": {
                     "user": "I decided to stay quiet, hoping the issue will resolve on its own.",
@@ -114,44 +112,6 @@ scenarios = {
                     "thoughts": "She reassured you, but you still feel anxious about the upcoming conversation."
                 }
             }
-        },
-        "sub_choices": {
-            "A": {
-                "description": "You spoke to her privately.",
-                "sub_choices": {
-                    "1": "Ask her to share her experiences.",
-                    "2": "Suggest resources for understanding bias.",
-                    "3": "Invite her to a women's group meeting.",
-                    "4": "Encourage her to reflect on her stance."
-                }
-            },
-            "B": {
-                "description": "You publicly challenged her comments.",
-                "sub_choices": {
-                    "1": "Ask others for their opinions.",
-                    "2": "Provide data on gender bias.",
-                    "3": "Suggest a team workshop on gender issues.",
-                    "4": "Follow up with her afterward."
-                }
-            },
-            "C": {
-                "description": "You avoided the conversation altogether.",
-                "sub_choices": {
-                    "1": "Reflect on why you chose silence.",
-                    "2": "Consider talking to a colleague about it.",
-                    "3": "Think about how to address it later.",
-                    "4": "Accept that sometimes silence is okay."
-                }
-            },
-            "D": {
-                "description": "You sought advice from a mentor.",
-                "sub_choices": {
-                    "1": "Discuss your feelings about the situation.",
-                    "2": "Ask for tips on approaching her.",
-                    "3": "Get insights on allyship.",
-                    "4": "Explore other mentor resources."
-                }
-            }
         }
-    },
-
+    }
+}
