@@ -23,8 +23,8 @@ scenarios = {
                         "challenges": "Some colleagues were hesitant to speak up, delaying the conversation.",
                         "encouragement": "Your calm approach encouraged others to open up and support the conversation.",
                         "dialogue": {
-                            "user": "I decided to ask others...",
-                            "her": "Her response was surprising...",
+                            "user": "I decided to ask others for their perspectives during a team meeting.",
+                            "her": "I wasn’t expecting everyone to have similar experiences.",
                             "thoughts": "You feel more confident now that others are involved."
                         }
                     },
@@ -35,8 +35,8 @@ scenarios = {
                         "challenges": "She still questioned whether the statistics applied to your specific workplace.",
                         "encouragement": "Presenting objective information empowered you to address the issue logically.",
                         "dialogue": {
-                            "user": "I shared some research with her.",
-                            "her": "She seemed taken aback by the numbers.",
+                            "user": "I shared some research with her, highlighting workplace disparities.",
+                            "her": "I didn’t realize the numbers were that significant.",
                             "thoughts": "You think you may have reached her logically."
                         }
                     },
@@ -47,9 +47,9 @@ scenarios = {
                         "challenges": "Some colleagues were reluctant to attend, but they participated anyway.",
                         "encouragement": "Seeing your colleagues' openness to learning made you feel optimistic.",
                         "dialogue": {
-                            "user": "Team workshop",
-                            "her": "Team workshop",
-                            "thoughts": "team workshop."
+                            "user": "I proposed a workshop to help us better understand these issues.",
+                            "her": "A workshop could be helpful, but will everyone be open to it?",
+                            "thoughts": "You’re hopeful that this could lead to meaningful change."
                         }
                     },
                     "4": {
@@ -59,9 +59,9 @@ scenarios = {
                         "challenges": "She was still defensive at times, but the conversation stayed civil.",
                         "encouragement": "You feel hopeful that this follow-up will lead to a lasting change.",
                         "dialogue": {
-                            "user": "follow up",
-                            "her": "follow up",
-                            "thoughts": "follow up"
+                            "user": "I followed up with her after the meeting to continue the discussion.",
+                            "her": "I appreciate you taking the time to talk.",
+                            "thoughts": "You feel hopeful that this follow-up will lead to lasting change."
                         }
                     }
                 }
@@ -80,7 +80,7 @@ scenarios = {
                         "challenges": "She remained defensive but open to listening.",
                         "encouragement": "The dialogue was respectful, keeping future interactions positive.",
                         "dialogue": {
-                            "user": "I invited her to continue the conversation privately after the meeting.",
+                            "user": "I suggested we have a private discussion to clear things up.",
                             "her": "I’m open to discussing this further, but I still have my doubts.",
                             "thoughts": "You feel hopeful that a one-on-one conversation might lead to a more nuanced understanding."
                         }
@@ -92,7 +92,7 @@ scenarios = {
                         "challenges": "Not all team members were comfortable sharing initially.",
                         "encouragement": "The conversation gained momentum as more voices joined in.",
                         "dialogue": {
-                            "user": "I asked if others had faced similar experiences with bias.",
+                            "user": "I asked the team if others had similar experiences.",
                             "her": "I hadn’t realized it was such a common issue here.",
                             "thoughts": "You feel validated as more team members begin sharing their experiences."
                         }
@@ -104,7 +104,7 @@ scenarios = {
                         "challenges": "Initial resistance came from those uncertain about implementation.",
                         "encouragement": "The initiative was a step toward meaningful change.",
                         "dialogue": {
-                            "user": "I proposed creating a team initiative to address bias more systematically.",
+                            "user": "I proposed a structured initiative to address bias within the team.",
                             "her": "That could be interesting, but I’m not sure how it would work.",
                             "thoughts": "You feel encouraged that she’s at least considering the idea."
                         }
@@ -116,7 +116,7 @@ scenarios = {
                         "challenges": "She remained hesitant about fully accepting your stance.",
                         "encouragement": "The respectful exchange made future dialogues seem possible.",
                         "dialogue": {
-                            "user": "I acknowledged her experience while stressing the need for us to support each other as allies.",
+                            "user": "I acknowledged her experience while emphasizing the need for allyship.",
                             "her": "I see your point, but I still believe my own experiences are valid.",
                             "thoughts": "You feel that recognizing her perspective may make her more open to hearing yours."
                         }
@@ -126,8 +126,8 @@ scenarios = {
             "C": {
                 "description": "You avoided the conversation altogether.",
                 "dialogue": {
-                    "user": "I decided to stay quiet, hoping the issue will resolve on its own.",
-                    "her": "Testing",
+                    "user": "I decided to stay quiet, hoping the issue would resolve on its own.",
+                    "her": "Nothing changed in her behavior.",
                     "thoughts": "However, you can’t shake the feeling that you missed an opportunity to challenge a harmful mindset."
                 },
                 "sub_choices": {
@@ -138,9 +138,9 @@ scenarios = {
                         "challenges": "The issue persisted without confrontation.",
                         "encouragement": "You are more aware of the impact of inaction.",
                         "dialogue": {
-                            "user": "I don't want to cause a conflict.",
-                            "her": "She acted the same way as before.",
-                            "thoughts": "You decided to maintain silence."
+                            "user": "I decided not to confront her to avoid conflict.",
+                            "her": "She continued behaving the same way.",
+                            "thoughts": "You chose to maintain silence, but now recognize its limitations."
                         }
                     },
                     "2": {
@@ -150,21 +150,21 @@ scenarios = {
                         "challenges": "It did not directly address the issue with her.",
                         "encouragement": "You feel more confident knowing you're not alone.",
                         "dialogue": {
-                            "user": "I talked to a colleague about it...",
-                            "her": "The colleague agreed with you.",
+                            "user": "I talked to a colleague about the situation.",
+                            "her": "The colleague agreed with your concerns.",
                             "thoughts": "You feel more confident because you’re not the only one who thinks this way."
                         }
                     },
                     "3": {
                         "text": "Think about how to address it later.",
                         "outcome": "You decide to speak to her when the timing feels right.",
-                        "pfeedback": "You’re glad to have a plan in place.",
+                                                "pfeedback": "You’re glad to have a plan in place.",
                         "challenges": "Delaying the conversation may weaken its impact.",
                         "encouragement": "You feel better prepared to address it later.",
                         "dialogue": {
-                            "user": "I still want to speak to her to see if there are any changes.",
-                            "her": "She seems surprised.",
-                                                        "thoughts": "You think you made the right decision, even though you chose to remain silent initially."
+                            "user": "I plan to talk to her when the timing feels right.",
+                            "her": "She seems surprised but open to discussing it.",
+                            "thoughts": "You feel you made the right decision to speak up, even if you waited initially."
                         }
                     },
                     "4": {
@@ -174,9 +174,9 @@ scenarios = {
                         "challenges": "The behavior you hoped to change remained unaddressed.",
                         "encouragement": "You understand that timing matters, and you can choose to speak up when more appropriate.",
                         "dialogue": {
-                            "user": "I don’t want to rush the conversation; she might not be ready to hear it.",
-                            "her": "She continued to act the same way.",
-                            "thoughts": "No change occurred, but you accept that not all battles need immediate confrontation."
+                            "user": "I chose not to confront her, thinking it wasn’t the right time.",
+                            "her": "Her behavior remained unchanged.",
+                            "thoughts": "You accept that not all issues require immediate confrontation, but change is still necessary."
                         }
                     }
                 }
@@ -184,8 +184,8 @@ scenarios = {
             "D": {
                 "dialogue": {
                     "user": "I spoke with my mentor for guidance on how to handle this.",
-                    "her": "Why does she need to talk to one?",
-                    "thoughts": "She reassured you, but you still feel anxious about the upcoming conversation."
+                    "her": "Your mentor offered support and advice.",
+                    "thoughts": "You feel more prepared but still anxious about the upcoming conversation."
                 },
                 "sub_choices": {
                     "1": {
@@ -195,8 +195,8 @@ scenarios = {
                         "challenges": "The conversation might still be challenging.",
                         "encouragement": "You feel encouraged by having a strategy in mind.",
                         "dialogue": {
-                            "user": "I asked for specific tips on how to have a constructive discussion.",
-                            "her": "It's important to start by acknowledging her perspective while also sharing your own experiences with bias.",
+                            "user": "I asked my mentor for specific tips on having a constructive discussion.",
+                            "her": "Your mentor advised starting by acknowledging her perspective, then sharing your own experiences.",
                             "thoughts": "You feel more prepared to have a calm, respectful conversation that focuses on understanding."
                         }
                     },
@@ -204,11 +204,11 @@ scenarios = {
                         "text": "Get advice on how to maintain a positive relationship with her.",
                         "outcome": "The mentor's guidance helped you find a balance between addressing issues and preserving rapport.",
                         "pfeedback": "You appreciated the focus on maintaining a good relationship.",
-                        "challenges": "The balance between addressing bias and maintaining positivity is still delicate.",
+                        "challenges": "Balancing confrontation with positivity is still delicate.",
                         "encouragement": "You’re hopeful that you can address concerns without damaging the relationship.",
                         "dialogue": {
-                            "user": "I asked my mentor how to address the issue without damaging our professional relationship.",
-                            "her": "Approach her with empathy, not confrontation. Make it clear that you value her contributions while sharing your concerns.",
+                            "user": "I asked my mentor how to address the issue while preserving our professional relationship.",
+                            "her": "Your mentor suggested approaching her with empathy and making it clear you value her contributions.",
                             "thoughts": "You feel reassured, knowing that you can address the problem without straining the relationship."
                         }
                     },
@@ -220,7 +220,7 @@ scenarios = {
                         "encouragement": "You’re more confident knowing there’s an objective party involved.",
                         "dialogue": {
                             "user": "I brought up the idea of having a neutral party mediate the discussion.",
-                            "her": "That could be helpful if you think it might escalate. Sometimes having a third person helps keep things objective.",
+                            "her": "Your mentor agreed, noting that mediation can help keep the conversation objective.",
                             "thoughts": "You consider that involving a mediator could make the conversation feel more balanced."
                         }
                     },
@@ -231,9 +231,9 @@ scenarios = {
                         "challenges": "More information means a longer preparation time.",
                         "encouragement": "You feel empowered by having more knowledge, making you better equipped for the conversation.",
                         "dialogue": {
-                            "user": "I asked my mentor if there are any resources that could help me understand internalized sexism better.",
-                            "her": "I recommend reading articles and research on this topic. The more informed you are, the better equipped you'll be to discuss it constructively.",
-                            "thoughts": "You feel empowered by gaining more knowledge, which can strengthen your approach in the conversation."
+                            "user": "I asked my mentor if there are any resources to better understand internalized sexism.",
+                            "her": "Your mentor recommended reading research articles and literature on internalized sexism.",
+                            "thoughts": "You feel more empowered by gaining knowledge, strengthening your approach in future discussions."
                         }
                     }
                 }
