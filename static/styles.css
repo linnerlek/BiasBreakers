@@ -124,7 +124,7 @@ h1 {
 }
 
 .chat-container {
-    max-width: 90 vw;
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
