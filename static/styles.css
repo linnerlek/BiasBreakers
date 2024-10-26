@@ -176,3 +176,33 @@ textarea {
 .send-button:hover {
     background-color: #5D4FBB; /* Darker shade on hover */
 }
+#howTo {
+    padding: 20px;
+}
+
+#about {
+    text-align: center; /* Center the content */
+    margin: 40px 20px; /* Add margin for spacing */
+}
+
+#h2Header {
+    font-size: 40px; /* Make the h2 bigger */
+    font-weight: bold; /* Make the h2 bold */
+}
+
+#h3Header {
+    font-size: 36px; /* Make the h2 bigger */
+    font-weight: bold; /* Make the h2 bold */
+}
+
+#about p {
+    margin: 0 auto; /* Center the paragraph */
+}
+
+#bodytext {
+    font-size: 27px; /* Set paragraph text size */
+    line-height: 1.6; /* Increase line height for readability */
+    max-width: 80vw; /* Limit width for better readability */
+
+}
+
