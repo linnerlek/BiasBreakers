@@ -8,6 +8,11 @@ automatic_scaling:
   min_instances: 1
   max_instances: 5
 
+# Install dependencies
+env: flex
+runtime_config:
+  python_version: 3.10
+
 # Optional: handlers for static files and templates
 handlers:
   - url: /static
