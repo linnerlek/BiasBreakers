@@ -55,53 +55,52 @@ scenarios = {
                 }
             },
             "B": {
-                "description": "You challenged her publically.",
                 "dialogue": {
                     "user": "I can't let this slide. It’s important we address bias openly.",
                     "her": "But isn't it just a discussion? People are allowed to have different opinions.",
                     "thoughts": "You realize that challenging her may create tension, but it's necessary to foster a more equitable environment."
+                }
                 },
-                
-                "outcomes": {
+                "sub_choices": {
                     "1": {
-                        "text": "Others openly support your stance.",
+                        "text": "Invite her to a follow-up discussion after the meeting.",
                         "outcome": "This is the outcome",
                         "pfeedback": "feedback",
                         "challenges": "challenges",
-                        "encouragement": "encouragement",
+                        "encouragement": "ecouragement",
                         "dialogue": {
-                            "user": "Invite her to a follow-up discussion after the meeting.",
+                            "user": "I invited her to continue the conversation privately after the meeting.",
                             "her": "I’m open to discussing this further, but I still have my doubts.",
                             "thoughts": "You feel hopeful that a one-on-one conversation might lead to a more nuanced understanding."
-                        }
+                        },
                     },
                     "2": {
-                        "text": "The conversation becomes heated.",
+                        "text": "Ask the team to share similar experiences.",
                         "dialogue": {
-                            "user": "I tried to explain the impact of gender bias, but she seemed defensive.",
+                            "user": "I asked if others had faced similar experiences with bias.",
                             "her": "I hadn’t realized it was such a common issue here.",
-                            "thoughts": "You feel validated as more team members begin sharing their experiences.",
-                        }
+                            "thoughts": "You feel validated as more team members begin sharing their experiences."
+                        },
                     },
                     "3": {
                         "text": "Propose creating a team initiative to address bias.",
                         "dialogue": {
-                            "user":"I proposed creating a team initiative to address bias more systematically.",
+                            "user": "I proposed creating a team initiative to address bias more systematically.",
                             "her": "That could be interesting, but I’m not sure how it would work.",
                             "thoughts": "You feel encouraged that she’s at least considering the idea."
-                        }
+                        },
                     },
                     "4": {
                         "text": "Acknowledge her perspective while emphasizing the importance of allyship.",
                         "dialogue": {
                             "user": "I acknowledged her experience while stressing the need for us to support each other as allies.",
-                            "her": "I see your point, but I still believe my own experiences are valid.",
+                            "her":" I see your point, but I still believe my own experiences are valid.",
                             "thoughts": "You feel that recognizing her perspective may make her more open to hearing yours."
+                        },
                     }
                 }
             },
-                 
-            },
+         
             "C": {
                 "dialogue": {
                     "user": "I decided to stay quiet, hoping the issue will resolve on its own.",
