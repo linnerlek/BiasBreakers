@@ -49,17 +49,25 @@
                     </div>
                 {% endif %}
                 {% endfor %}
-
+                
+                
                 {% if game_ended %}
-
+                    <form action="/new_game" method="get">
+                        <div class="choice-buttons">
+                            <button type="submit">Restart Scenario</button>
+                        </div>
+                    </form>
                 {% endif %}
+
 
                 <!-- Main choice form -->
                 {% if not sub_choices and not game_ended %}
                     <form method="POST" class="choice-form">
-                        {% for key, value in scenario['choices'].items() %}
-                            <button type="submit" name="choice" value="{{ key }}">{{ value }}</button>
-                        {% endfor %}
+                         <div class="choice-buttons">
+                            {% for key, value in scenario['choices'].items() %}
+                                <button type="submit" name="choice" value="{{ key }}">{{ value }}</button>
+                            {% endfor %}
+                        </div>
                     </form>
                 {% endif %}
 
@@ -67,11 +75,13 @@
                 {% if sub_choices and not game_ended %}
                     <div class="sub-choices">
                         <form method="post">
-                            <input type="hidden" name="main_choice" value="{{ session.main_choice }}">
-                            <p>Select a follow-up action:</p>
-                            {% for key, sub_data in sub_choices.items() %}
-                                <button type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
-                            {% endfor %}
+                            <div class="choice-buttons">
+                                <input type="hidden" name="main_choice" value="{{ session.main_choice }}">
+                                <p>Select a follow-up action:</p>
+                                {% for key, sub_data in sub_choices.items() %}
+                                    <button type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
+                                {% endfor %}
+                            </div>
                         </form>
                     </div>
                 {% endif %}
