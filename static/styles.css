@@ -51,7 +51,28 @@ h1 {
 }
 
 #PlayButton {
-    width: 30px;
+    width: 200px;
+}
+
+
+.play-text {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.large-play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; 
+}
+
+.large-play-button {
+    text-decoration: none;
+}
+
+#LargePlayButton {
+    width: 600px; 
 }
 
 .scenario-container {
@@ -93,7 +114,7 @@ h1 {
 
 
 .chat-container {
-    max-width: 1200px;
+    max-width: 95 vw;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -111,8 +132,9 @@ h1 {
     background-color: #f9f9f9;
 }
 
-.chat-message {
-    margin: 10px 0;
+.chat-message {         /* Space inside each box */
+    margin-bottom: 45px;    /* Space between messages */
+    background-color: #f9f9f9;
 }
 
 .user-message {
