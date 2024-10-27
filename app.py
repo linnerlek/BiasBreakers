@@ -1,3 +1,6 @@
+# All code written by Linn Klofta
+# 2024
+
 from flask import Flask, render_template, request, session, redirect
 from scenarios import scenarios
 
