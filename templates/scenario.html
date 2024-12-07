@@ -5,38 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmpowHer</title>
+    <title>BiasBreakers - Play</title>
     <link rel="stylesheet" href="/static/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-container">
                 <ul class="nav-left">
+                    <li><a href="#"><img id="imglogo" src="/static/images/BB.png" alt=""></a></li>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
                     <li><a href="/howto">How to play</a></li>
                 </ul>
                 <div class="nav-right">
                     <a href="/scenario" id="play-button">
-                        <img src="/static/images/VPlx9v01.svg" alt="Play Button" id="PlayButton">
+
+                        <img src="/static/images/play.svg" alt="Play Button" id="PlayButton">
                     </a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <h1>BiasBreakers</h1>
+        <h1 id="mainH1">Bias<span id="secondH1">Breakers</span></h1>
 
         <div class="scenario-container">
             <div class="scenario-box" onclick="window.location.href='/game/1'">
-                <img src="/static/images/image0-3.jpg" alt="Scenario 1" class="scenario-image">
+                <img src="/static/images/meeting.png" alt="Scenario 1" class="scenario-image">
                 <div class="scenario-description">
-                    <h2 id="white">Addressing Internalized Sexism and Helping Women Become Better Allies</h2>
-                    <p id="white">
+                    <h2 id="scenarioHeader">Addressing Internalized Sexism and Helping Women Become Better Allies</h2>
+                    <p>
                         A woman frequently aligns herself with male colleagues and dismisses other women’s concerns about gender bias, reflecting internalized sexism. She downplays issues like gender inequality and workplace discrimination. The scenario focuses on how to engage her in a constructive conversation to help her understand the importance of being an ally to other women and promoting gender equality in the workplace.
                     </p>
                 </div>

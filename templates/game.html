@@ -2,112 +2,172 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmpowHer - Game</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiasBreakers - Playing</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="nav-container">
-                <ul class="nav-left">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/howto">How to play</a></li>
-                </ul>
-                <div class="nav-right">
-                    <a href="/scenario" id="play-button">
-                        <img src="/static/images/VPlx9v01.svg" alt="Play Button" id="PlayButton">
-                    </a>
-                </div>
-            </div>
-        </nav>
+      <nav>
+        <div class="nav-container">
+          <ul class="nav-left">
+            <li>
+              <a href="#"
+                ><img id="imglogo" src="/static/images/BB.png" alt=""
+              /></a>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/howto">How to play</a></li>
+          </ul>
+          <div class="nav-right">
+            <a href="/scenario" id="play-button">
+              <img
+                src="/static/images/play.svg"
+                alt="Play Button"
+                id="PlayButton"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="chat-container" id="white">
-            <div class="chat-box">
-                <div class="chat-message scenario" id="white">
-                    <img src="/static/images/search-folder-svgrepo-com.svg" id="searchimg" alt="">
-                    <p id="white">{{ scenario['description'] }}</p>
+      <div class="game-container">
+        <div class="scenario">
+          <img src="/static/images/meeting.png" id="searchimg" alt="" />
+          <p>{{ scenario['description'] }}</p>
+        </div>
+
+        <div class="main-container">
+          <!-- Left Section (Chat) -->
+          <div class="left-section">
+            <div class="chat-container">
+              <div class="chat-box">
+                {% for dialogue in dialogue_history %} {% if
+                dialogue.user_message %}
+                <div class="chat-message user-message">
+                  <img
+                    src="/static/images/woman2.png"
+                    alt=""
+                    class="user-image"
+                  />
+                  <div class="message-bubble">
+                    <p id="message">{{ dialogue.user_message|safe }}</p>
+                  </div>
                 </div>
-
-                {% for dialogue in dialogue_history %}
-                    {% if dialogue.user_message %}
-                        <div class="chat-message user-message">
-                            <img src="/static/images/image0-3.jpg" alt="" class="user-image">
-                            <div class="message-bubble">
-                                <p id="message">{{ dialogue.user_message|safe }}</p>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% if dialogue.her_response %}
-                        <div class="chat-message her-message">
-                            <img src="/static/images/image0-2.jpg" alt="" class="her-image">
-                            <div class="message-bubble">
-                                <p id="message">{{ dialogue.her_response|safe }}</p>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% if dialogue.thoughts %}
-                        <div class="chat-message user-message">
-                            <img src="/static/images/image0-3.jpg" alt="" class="user-image">
-                            <div class="message-bubble">
-                                <p id="message">{{ dialogue.thoughts|safe }}</p>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% if dialogue.additional %}
-                        <div class="chat-message additional-message">
-                            <div class="message-bubble">
-                                <p id="message">{{ dialogue.additional|safe }}</p>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-                
-                
-                {% if game_ended %}
-                    <form action="/new_game" method="get">
-                        <div class="choice-buttons">
-                            <button id="pink" type="submit">Restart Scenario</button>
-                        </div>
-                    </form>
+                {% endif %} {% if dialogue.her_response %}
+                <div class="chat-message her-message">
+                  <img
+                    src="/static/images/woman1.png"
+                    alt=""
+                    class="her-image"
+                  />
+                  <div class="message-bubble">
+                    <p id="message">{{ dialogue.her_response|safe }}</p>
+                  </div>
+                </div>
+                {% endif %} {% if dialogue.thoughts %}
+                <div class="chat-message user-message">
+                  <img
+                    src="/static/images/woman2.png"
+                    alt=""
+                    class="user-image"
+                  />
+                  <div class="message-bubble">
+                    <p id="message">{{ dialogue.thoughts|safe }}</p>
+                  </div>
+                </div>
+                {% endif %} {% endfor %} {% if game_ended %}
+                <form action="/new_game" method="get">
+                  <div class="choice-buttons">
+                    <button type="submit">Restart Scenario</button>
+                  </div>
+                </form>
                 {% endif %}
-
 
                 <!-- Main choice form -->
                 {% if not sub_choices and not game_ended %}
-                    <form method="POST" class="choice-form">
-                         <div class="choice-buttons">
-                            {% for key, value in scenario['choices'].items() %}
-                                <button id="pink" type="submit" name="choice" value="{{ key }}">{{ value }}</button>
-                            {% endfor %}
-                        </div>
-                    </form>
+                <form method="POST" class="choice-form">
+                  <div class="choice-buttons">
+                    {% for key, value in scenario['choices'].items() %}
+                    <button type="submit" name="choice" value="{{ key }}">
+                      {{ value }}
+                    </button>
+                    {% endfor %}
+                  </div>
+                </form>
                 {% endif %}
 
                 <!-- Sub-choice form -->
                 {% if sub_choices and not game_ended %}
-                    <div class="sub-choices">
-                        <form method="post">
-                            <div class="choice-buttons">
-                                <input type="hidden" name="main_choice" value="{{ session.main_choice }}">
-                                <p id="white">Select a follow-up action:</p>
-                                {% for key, sub_data in sub_choices.items() %}
-                                    <button id="pink" type="submit" name="sub_choice" value="{{ key }}">{{ sub_data['text'] }}</button>
-                                {% endfor %}
-                            </div>
-                        </form>
+                <div class="sub-choices">
+                  <form method="post">
+                    <div class="choice-buttons">
+                      <input
+                        type="hidden"
+                        name="main_choice"
+                        value="{{ session.main_choice }}"
+                      />
+                      {% for key, sub_data in sub_choices.items() %}
+                      <button type="submit" name="sub_choice" value="{{ key }}">
+                        {{ sub_data['text'] }}
+                      </button>
+                      {% endfor %}
                     </div>
+                  </form>
+                </div>
                 {% endif %}
-                
+              </div>
             </div>
+          </div>
+
+          <!-- Right Section (Outcomes/Feedback) -->
+          <div class="right-section">
+            <!-- Statistics panel -->
+            <div class="statistics-panel">
+              <h3>Outcome and Reflection:</h3>
+              <div class="choices-log">
+                {% for choice in user_choices %}
+                <p><strong>You chose:</strong> {{ choice }}</p>
+                {% endfor %}
+              </div>
+              <!-- Check if 'outcome' is not None or empty before showing it -->
+              {% if statistics.outcome %}
+              <div class="stat-item">
+                <strong>Outcome:</strong>
+                <p>{{ statistics.outcome }}</p>
+              </div>
+              {% endif %}
+
+              <!-- Check if 'feedback' is not None or empty before showing it -->
+              {% if statistics.feedback %}
+              <div class="stat-item">
+                <strong>Feedback:</strong>
+                <p>{{ statistics.feedback }}</p>
+              </div>
+              {% endif %}
+
+              <!-- Check if 'challenges' is not None or empty before showing it -->
+              {% if statistics.challenges %}
+              <div class="stat-item">
+                <strong>Challenges:</strong>
+                <p>{{ statistics.challenges }}</p>
+              </div>
+              {% endif %}
+
+              <!-- Check if 'encouragement' is not None or empty before showing it -->
+              {% if statistics.encouragement %}
+              <div class="stat-item">
+                <strong>Encouragement:</strong>
+                <p>{{ statistics.encouragement }}</p>
+              </div>
+              {% endif %}
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
