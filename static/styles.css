@@ -67,8 +67,9 @@ h1 {
 }
 
 #h2Header {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
+    margin-top: 30px;
 }
 
 #h2HeaderHowTo {
@@ -131,12 +132,9 @@ h1 {
 }
 
 #LargePlayButtonHowTo {
-    padding-top: 250px;
-    width: 250px; 
-}
-
-#LargePlayButtonHowTo:hover {
-    transform: scale(1.3);
+    padding-top: 380px;
+    width: 350px;
+    animation: pulse 1s infinite ease-in-out;
 }
 
 .choice-buttons {
@@ -445,7 +443,7 @@ h1 {
 
 #pc {
     display: block;
-    margin-top: 60%;
+    margin-bottom: -60%;
     width: 100%;
 
 }
@@ -461,13 +459,13 @@ h1 {
 /* ABOUT PAGE */
 #about {
     text-align: center; /* Center the content */
-    margin: 120px 20px; /* Add margin for spacing */
 }
 
 #about p {
-    font-size: 27px;
-    line-height: 1.6;
-    max-width: 90%; /* Adjust to prevent overflow */
+    padding-top: 30px;
+    font-size: 24px;
+    line-height: 1.7;
+    max-width: 95%; /* Adjust to prevent overflow */
     margin: 0 auto;
 }
 
