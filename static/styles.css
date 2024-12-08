@@ -32,6 +32,7 @@ header {
     padding: 10px 20px;
     height: 80px; 
     box-sizing: border-box; 
+    background: linear-gradient(white 70%, #FCF2F7);
 }
 
 ul {
@@ -43,8 +44,19 @@ li {
     margin-bottom: 10px; 
 }
 
+#footercp {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 30px;
+    color: #ed6fbf;
+}
 
-
+#footercpScenario {
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 220px;
+    color: #ed6fbf;
+}
 
 
 
@@ -445,7 +457,7 @@ h1 {
     display: block;
     margin-bottom: -60%;
     width: 100%;
-
+    animation: pulse 5s infinite ease-in-out;
 }
 
 
@@ -504,7 +516,7 @@ h1 {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05); /* Slightly enlarge the message */
+    transform: scale(1.02); /* Slightly enlarge the message */
   }
   100% {
     transform: scale(1);
